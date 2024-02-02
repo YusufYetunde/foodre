@@ -195,37 +195,57 @@ ul {
 }
 /* Favorites */
 .favorites{
-  background:var(--black);
-  color:var(--white);
+  width: 30%;
+  height: 450px;
+  overflow: auto;
+  overflow-y: scroll;
+  background:var(--white);
+  color:var(--black);
   padding:1rem 0;
+  margin-right: 1.5rem;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: -1px 3px 10px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 3px 10px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 10px -1px rgba(0,0,0,0.75);
+  transition: 5s ease-in-out;
+  float: right;
 }
 .favorites-content{
-  width:var(--view-width);
-  max-width:var(--max-width);
+  height: auto;
   margin:0 auto;
+  text-align: center;
+}
+.favorites-content h5 {
+  border-bottom: 1px solid #000b19;
 }
 .favorites-container{
   display:flex;
+  flex-direction: column;
   gap:0.5rem;
-  flex-wrap:wrap;
 }
 .favorite-item{
+  margin: 0.4rem 1.4rem;
   text-align:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .favorites-img{
-  width:60px;
-  border-radius:50%;
-  border:5px solid var(--white);
+  width:100px;
   cursor:pointer;
+}
+.favorite-desc{
+  font-size: 24px;
 }
 .remove-btn{
   margin-top:0.25rem;
   background:transparent;
-  color:var(--white);
+  color:var(--red-dark);
     border:transparent;
   cursor:pointer;
-  font-size:0.5rem;
+  font-size:24px;
   transition:var(--transition);
+  text-transform: capitalize;
 }
 .remove-btn:hover{
   color: var(--primary-200);
@@ -348,6 +368,7 @@ cursor:pointer;
   padding-top: 1.5rem;
   padding-left:1.5rem;
   padding-right: 1.5rem;
+  margin-right: 1.5rem;
 }
 .header-logo {
   font-size: 1.8rem;
@@ -379,22 +400,27 @@ main {
 
 .hero-section {
   margin-top: 12rem;
+  background-image: url("./images/foodbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
-.hero-img {
-  width: 10rem;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
 .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 0 2rem;
 }
 
 .hero-title {
   font-size: 3rem;
+  font-weight: bold;
+}
+.sub-title {
+  font-weight: 500;
 }
 
 @media screen and (min-width: 700px) {
